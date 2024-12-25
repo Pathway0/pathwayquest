@@ -1,0 +1,339 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: 'alice', alice;
+    color: #ffffff;
+    background-color: #441069; /* Purple background */
+}
+/* General Styles */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    color: #441069;
+}
+/* Hamburger Menu */
+.hamburger-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: none;
+}
+
+.menu-icon {
+    position: absolute;
+    top: 20px;
+    left: 20px; /* Keep it at the top-left corner */
+    z-index: 1001; /* Ensure it stays above the menu */
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.menu-icon span {
+    width: 25px;
+    height: 3px;
+    background-color: #fdee1b;
+}
+
+.menu {
+    position: fixed; /* Ensure it stays in the same place */
+    top: 0;
+    right: 0; /* Position the menu to open from the right */
+    width: 300px; /* Set a width for the menu */
+    height: 100%; /* Full height */
+    background-color: #ffffff; /* Menu background color */
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+    transform: translateX(100%); /* Hide menu by default (off-screen) */
+    transition: transform 0.3s ease-in-out; /* Smooth sliding */
+}
+
+.menu.hidden {
+    transform: translateX(0); /* Menu slides into view */
+}
+.menu a {
+    text-decoration: none;
+    color: #441069;
+    margin: 5px 0;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #441069;
+    color: white;
+}
+
+.cta-button {
+    padding: 8px 16px;
+    font-size: 1rem;
+    color: #441069;
+    background-color: #f5c518;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* News and Updates */
+.news-updates {
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+.news-item a {
+    color: #4c268c;
+    text-decoration: underline;
+}
+h1, h2, h3 {
+    font-family: 'Alex Brush', sans-serif; /* Bold and clean font for headings */
+}
+
+a {
+    color: #FFBC00; /* Gold for links */
+    text-decoration: none;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 110px 80px;
+    background-image: url('images/pathway.png'); /* Adds the background image */
+    background-size: cover; /* Ensures the image covers the entire section */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    color: #fff; /* Adjust text color for better visibility */
+}
+
+
+.hero h1 {
+    font-size: 3rem;
+    color: #ffffff;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+/* Navigation Bar */
+.navbar {
+    display: flex;
+    justify-content: space-between; /* Space between logo and button */
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #441069; /* Matches website color scheme */
+    color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo */
+.navbar .logo img {
+    height: 40px; /* Adjust size of the logo */
+    width: auto; /* Maintain aspect ratio */
+}
+/* Call-to-Action Button */
+.cta-button {
+    padding: 8px 16px;  /* Reduced padding for smaller size */
+    font-size: 0.9rem;  /* Slightly smaller font size */
+    color: #4c268c;
+    background-color: #f5c518;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    position: fixed; /* Keeps the button at the top-right */
+    top: 20px;       /* Distance from the top */
+    right: 20px;     /* Distance from the right */
+    z-index: 1000;   /* Ensures visibility above other elements */
+}
+/* Highlights Section */
+.highlights {
+    background-color: #ffffff;
+    color: #441069;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.highlight-cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card {
+    background-color: #441069;
+    color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 250px;
+}
+
+.card .icon {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #FFBC00;
+}
+
+/* Testimonials Section */
+/* Testimonials Section */
+.testimonials {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #441069;
+    position: relative;
+    color: #f7de00;
+  }
+  
+  .testimonial-slider {
+    position: relative;
+    overflow: hidden;
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+  }
+  
+  .slides-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .slide {
+    flex: 0 0 33.33%; /* Shows 3 slides at a time */
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  .student-photo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+  }
+  
+  .testimonial-text {
+    font-style: italic;
+    color: #f3f0f0;
+  }
+  
+  .slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #441069;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 20px;
+    z-index: 10;
+  }
+  
+  .left-btn {
+    left: 10px;
+  }
+  
+  .right-btn {
+    right: 10px;
+  }
+  
+  .slider-btn:hover {
+    background-color: #f5c518;
+  }  
+/* Mission Section */
+.mission-section {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #f5f5f5; /* Light background for contrast */
+    color: #441069; /* Matches the theme color */
+}
+
+.mission-section h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #4c268c; /* Slightly darker for the heading */
+}
+
+.mission-section p {
+    font-size: 1rem;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    display: inline-block;
+}
+
+.mission-section .mission-icon {
+    height: 40px; /* Adjust the size of the logo/icon */
+    width: auto; /* Maintain aspect ratio */
+    margin-left: 10px;
+    vertical-align: middle; /* Align with the text */
+    border-radius: 5px; /* Add a subtle rounded effect */
+}
+
+/* Footer Section */
+.cta-footer {
+    background-color: #441069;
+    color: #ffffff;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+.cta-footer .cta-button {
+    background-color: #FFBC00;
+    color: #441069;
+}
+/* Footer Section */
+.footer-section {
+    background-color: #441069;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-section h3 {
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+}
+
+.footer-section a {
+    color: #f5c518;
+    text-decoration: none;
+}
+
+.footer-section a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.social-media {
+    margin-top: 15px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.social-icon {
+    font-size: 1.5rem;
+    color: #fff;
+    background-color: #4c268c;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+}
+
+.social-icon:hover {
+    background-color: #f5c518;
+    color: #441069;
+}
