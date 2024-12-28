@@ -1,60 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <!-- Specifies the character encoding and viewport settings for responsive design -->
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-        <!-- The title of the webpage displayed on the browser tab -->
-        <title>Pathway Quest</title>
-    
-        <!-- Links to external CSS and JavaScript files -->
-        <link rel="stylesheet" href="styles.css">
-        <script src="script.js" defer></script>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    </head>
-    <body>
-         <!-- Hamburger Menu -->
-        <div class="navbar">
-              <div class="logo">YourLogo</div>
-                  <div class="menu">
-                          <button class="signup-btn">Sign Up</button>
-                                  <div class="hamburger">☰</div>
-                                      </div>
-                                      </div>
+<head>
+    <!-- Specifies the character encoding and viewport settings for responsive design -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-                                      <div class="overlay">
-                                          <span class="close-btn">×</span>
-                                              <ul class="menu-items">
-                                                      <li>Home</li>
-                                                              <li>About</li>
-                                                                      <li>Services</li>
-                                                                              <li>FAQ</li>
-                                                                                      <li>Contact</li>
-                                                                                          </ul>
-                                                                                          </div>
+    <!-- The title of the webpage displayed on the browser tab -->
+    <title>Pathway Quest</title>
 
-                                                                                          <div class="content">
-                                                                                              <p>Scroll down to see the fixed navigation bar in action.</p>
-                                                                                                  <p>Lorem ipsum dolor sit amet...</p>
-                                                                                                      <!-- Add more content here -->
-                                                                                                      </div>       
-        <!-- Hero Section: The prominent section at the top of the page -->
-        <header class="hero">
-            <div class="hero-content">
-                <!-- Main heading for the program -->
-                </div>
-                 <br>
-                    <br>
-                        <br>
-                            <br>
-                                <br>
-                            <br>
-                     <br>
-                <br>
-            </div>
-        </header>
-
+    <!-- Links to external CSS and JavaScript files -->
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="navbar">
+      <nav>
+        <input type="checkbox" id="sidebar-active">
+        <label for="sidebar-active">
+          <svg xmlns="http://www.w3.org/2000/svg" height="32px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
+        </label>
+        <img src="images/logo.png" alt="Logo" id="logo" class="logo-image" />
+        <div class="links-container">
+          <label for="sidebar-active">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
+          </label>
+        </nav>
+      <div id="overlay" onclick="closeSidebar()" aria-hidden="true"></div>
+    </div>
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-content">
+            <!-- Main heading -->
+        </div>
+    </header>
     <!-- Program Highlights Section: Explains the benefits of the program -->
     <section class="highlights">
         <h2>Pathway Program Benefits</h2>
