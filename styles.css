@@ -89,7 +89,7 @@ nav svg{
         width: 100%;
         box-sizing: border-box;
         height: auto;
-        padding 20px 30px;
+        padding: 20px 30px;
         justify-content: flex-start;
     }
     .open-sidebar-button, .close-sidebar-button{
