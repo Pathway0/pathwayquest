@@ -1,40 +1,36 @@
-const openButton = document.getElementById('open-sidebar-button')
-const navbar = document.getElementById('navbar')
+// Add interactivity to buttons (e.g., Join Now and Sign Up buttons)
+document.querySelectorAll('.cta-button').forEach(button => {
+    button.addEventListener('click', (event) => {
+        const link = button.getAttribute('data-link'); // Get the link from the data-link attribute
+        if (link) {
+            window.location.href = link; // Navigate to the specified link
+        }
+    });
+});
 
-const media = window.matchMedia("(width < 700px)")
+// JavaScript for slider functionality
+const slidesContainer = document.querySelector('.slides-container');
+const slides = document.querySelectorAll('.slide');
+const totalSlides = slides.length;
 
-media.addEventListener('change', (e) => updateNavbar(e))
+let currentIndex = 0;
 
-function updateNavbar(e){
-  const isMobile = e.matches
-  console.log(isMobile)
-  if(isMobile){
-    navbar.setAttribute('inert', '')
-  }
-  else{
-    // desktop device
-    navbar.removeAttribute('inert')
-  }
+function updateSlider() {
+  const slideWidth = slides[0].clientWidth;
+  slidesContainer.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
 }
 
-function openSidebar(){
-  navbar.classList.add('show')
-  openButton.setAttribute('aria-expanded', 'true')
-  navbar.removeAttribute('inert')
+function nextSlide() {
+  currentIndex = (currentIndex + 1) % totalSlides;
+  updateSlider();
 }
 
-function closeSidebar(){
-  navbar.classList.remove('show')
-  openButton.setAttribute('aria-expanded', 'false')
-  navbar.setAttribute('inert', '')
+function prevSlide() {
+  currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+  updateSlider();
 }
 
-// For Bookmark Links
-// const navLinks = document.querySelectorAll('nav a')
-// navLinks.forEach(link => {
-//   link.addEventListener('click', () => {
-//     closeSidebar()
-//   })
-// })
-
-updateNavbar(media)
+// Automatic sliding
+setInterval(() => {
+  nextSlide();
+}, 5000); // Slides every 5 seconds
