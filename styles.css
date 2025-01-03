@@ -3,7 +3,7 @@ body {
     margin: 0;
     font-family: 'alice', alice;
     color: #ffffff;
-    background-color: #441069; /* Purple background */
+    background-image: url('images/desk1.png')
 }
 /* General Styles */
 body {
@@ -11,9 +11,12 @@ body {
     font-family: 'Arial', sans-serif;
     color: #441069;
 }
+.navbar{
+    background-image: url('images/desk1.png');
+}
 /* Logo */
 .high {
-    background-image: url('images/coming.png'); /* Background image */
+    background-image: url('images/desk1.png'); /* Background image */
     background-size: cover; /* Cover the entire viewport */
     background-position: center; /* Center the image */
     height: 100vh; /* Full viewport height */
@@ -29,10 +32,13 @@ body {
     
     p {
         font-size: 24px; /* Adjust font size as needed */
+    }
+    @media (max-width: 769px){
+        background-image: url('images/mob1.png'); 
     }
 }
 .digital {
-    background-image: url('images/coming.png'); /* Background image */
+    background-image: url('images/desk1.png'); /* Background image */
     background-size: cover; /* Cover the entire viewport */
     background-position: center; /* Center the image */
     height: 100vh; /* Full viewport height */
@@ -48,6 +54,9 @@ body {
     
     p {
         font-size: 24px; /* Adjust font size as needed */
+    }
+    @media (max-width: 769px){
+        background-image: url('images/mob1.png'); 
     }
 }
 .news {
@@ -126,7 +135,7 @@ nav svg {
 .open-sidebar-button, .close-sidebar-button {
     display: none;
 }
-@media (min-width: 769px){
+@media (max-width: 769px){
     .links-container {
         flex-direction: column;
         align-items: flex-start;
@@ -135,9 +144,9 @@ nav svg {
         right: -100%;
         z-index: 10;
         width: 300px;
-        background-color: var(--color-1);
         box-shadow: -5px 0 5px rgba(73, 2, 114, 0.25);
         transition: 0.75s ease-out;
+        background-image: url('images/mob1.png');
     }
     nav a {
         width: 100%;
@@ -145,6 +154,7 @@ nav svg {
         height: auto;
         padding: 20px 30px;
         justify-content: flex-start;
+        background-image: url('mob1.png');
     }
     .open-sidebar-button, .close-sidebar-button {
         padding: 20px;
@@ -166,7 +176,6 @@ nav svg {
 .hero {
     text-align: center;
     padding: 50px 20px;
-    background-color: #441069;
     color: white;
 }
 
@@ -284,7 +293,6 @@ a {
 .testimonials {
     text-align: center;
     padding: 50px 20px;
-    background-color: #441069;
     position: relative;
     color: #f7de00;
   }
@@ -380,7 +388,6 @@ a {
 
 /* Footer Section */
 .cta-footer {
-    background-color: #441069;
     color: #ffffff;
     text-align: center;
     padding: 30px 20px;
@@ -392,7 +399,6 @@ a {
 }
 /* Footer Section */
 .footer-section {
-    background-color: #441069;
     color: #fff;
     padding: 20px;
     text-align: center;
@@ -427,7 +433,6 @@ a {
 .social-icon {
     font-size: 1.5rem;
     color: #fff;
-    background-color: #4c268c;
     border-radius: 50%;
     width: 40px;
     height: 40px;
